@@ -1,12 +1,15 @@
 import express from "express";
 import mongoose from "mongoose";
-import cors from "cors";
+
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
+
+app.use(cors({ origin: "*" }));
 
 // Middleware
 app.use(cors());
